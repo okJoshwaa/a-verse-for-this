@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Verse For This</title>
+<meta name="description" content="Tell it how you're feeling. Get a King James verse that meets you there." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>
+  <div class="app">
+    <header class="hero">
+      <div class="badge">KJV &middot; no signup &middot; nothing saved</div>
+      <h1>A Verse For This</h1>
+      <p class="tagline">Tell it how you're feeling. Get a King James verse that meets you there.</p>
+    </header>
+
+    <main class="card">
+      <label class="field-label" for="feelingInput">How are you feeling right now?</label>
+      <textarea id="feelingInput" rows="2" placeholder="anxious about tomorrow, honestly"></textarea>
+
+      <div class="chips" id="chipRow">
+        <span>Or pick one:</span>
+        <button class="chip" data-feeling="anxious">anxious</button>
+        <button class="chip" data-feeling="sad">sad</button>
+        <button class="chip" data-feeling="angry">angry</button>
+        <button class="chip" data-feeling="lonely">lonely</button>
+        <button class="chip" data-feeling="guilty">guilty</button>
+        <button class="chip" data-feeling="tired">tired</button>
+        <button class="chip" data-feeling="hopeless">hopeless</button>
+        <button class="chip" data-feeling="uncertain">uncertain</button>
+        <button class="chip" data-feeling="grateful">grateful</button>
+        <button class="chip" data-feeling="tempted">tempted</button>
+        <button class="chip" data-feeling="grieving">grieving a loss</button>
+        <button class="chip" data-feeling="overwhelmed">overwhelmed</button>
+      </div>
+
+      <button id="findBtn" class="primary-btn">Find my verse</button>
+
+      <section id="result" class="result hidden">
+        <div class="verse-card" id="verseCard">
+          <div class="verse-meta">
+            <span class="verse-tag" id="verseFeeling"></span>
+            <span class="verse-version">KJV</span>
+          </div>
+          <p class="verse-text" id="verseText"></p>
+          <p class="verse-ref" id="verseRef"></p>
+        </div>
+        <button id="anotherBtn" class="secondary-btn" type="button">This isn't it — give me another</button>
+        <p class="result-hint" id="resultHint"></p>
+      </section>
+    </main>
+
+    <footer class="foot">
+      Runs fully in your browser. Nothing you type is saved or sent anywhere. King James Version — public domain text.
+    </footer>
+  </div>
+
+  <script src="particles.js"></script>
+  <script src="verses.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
